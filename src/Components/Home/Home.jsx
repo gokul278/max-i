@@ -19,7 +19,7 @@ export const Home = () => {
             <div className="flex justify-center h-[60vh] lg:h-screen" style={{ backgroundImage: `url(${bg})`, width: "100%", backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="w-[90%] pt-[100px]">
                     <div className="w-[100%] lg:w-[40%] mt-[50px] flex justify-center flex-col">
-                        <h1 className="topic text-[18px] lg:text-[25px] text-[#fff]">
+                        <h1 className="topic text-[24px] lg:text-[28px] text-[#fff]">
                             <Typewriter
                                 options={{
                                     strings: ['Branding', 'Marketing', 'Sales'],
@@ -30,7 +30,7 @@ export const Home = () => {
                             {/* Branding - Marketing - Sales */}
                         </h1>
                         <div className='flex justify-center pt-2 pb-10'><div className='line' align="center"></div></div>
-                        <p className="header text-[#fff] text-[40px] lg:text-[70px] text-center font-bold tracking-widest">Creative Agency</p>
+                        <p className="header text-[#fff] text-[50px] lg:text-[70px] text-center font-bold tracking-widest">Creative Agency</p>
                     </div>
                 </div>
             </div>
@@ -130,11 +130,11 @@ export const Home = () => {
             </div>
 
 
-            <div className='w-[100%] bg-[#ffaa14]' align="center">
-                <h1 className='text-[50px] font-bold capitalize text-[#000] pt-10' data-aos="fade-up" align="center">What We Do ?</h1>
-                <div className='w-[90%] lg:w-[80%] flex flex-col lg:flex-row py-14' align="center">
+            <div className='w-[100%] bg-[#ffaa14] py-14' align="center">
+                <h1 className='text-[50px] font-bold capitalize text-[#000]' data-aos="fade-up" align="center">What We Do ?</h1>
+                <div className='w-[90%] lg:w-[80%] flex flex-col lg:flex-row' align="center">
                     <div className='w-[100%] h-[600px] lg:h-[450px] flex flex-col lg:w-[60%]'>
-                        <h2 className='text-[25px] text-start font-bold mt-0 lg:mt-[50px]'>Max-I</h2>
+                        <h2 className='text-[25px] text-start font-bold mt-[10px] lg:mt-[50px]'>Max-I</h2>
                         <p className='text-justify text-[16px] font-normal mt-5'>Max-I is a leading digital marketing agency that specializes in creating dynamic online strategies tailored to each client's unique needs. Our team of passionate marketers is dedicated to helping businesses unlock their full potential in the digital realm by developing growth-oriented campaigns that drive engagement, boost visibility, and generate meaningful results.</p>
                         <p className='text-justify text-[16px] font-normal mt-5'>At Max-I, we blend creativity with data-driven insights to craft compelling digital experiences that resonate with audiences and drive conversions. Whether it's optimizing your website for search engines, crafting engaging social media campaigns, or designing user-friendly websites, we harness the power of digital marketing to help businesses thrive in today's competitive landscape.</p>
                     </div>

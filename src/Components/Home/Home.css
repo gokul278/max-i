@@ -146,10 +146,8 @@
   border-radius: 50%;
   width: 230px;
   height: 230px;
-  background: conic-gradient(
-    #ffaa14 calc(var(--percentage) * 1%), 
-    #3c3d37 calc(var(--percentage) * 1%)
-  );
+  background: conic-gradient(#ffaa14 calc(var(--percentage) * 1%),
+      #3c3d37 calc(var(--percentage) * 1%));
 }
 
 .reviewinside {

@@ -1,17 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.header{
-    font-family: "Abril Fatface", serif;
-  font-weight: 400;
+.header {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   font-style: normal;
 }
 
-.topic{
-  color: #fff;
-  font-size: 40px;
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
+.topic {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background-color: #ffaa14;
+}
+
+.button {
+  width: 220px;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #ffaa14;
+  color: #000;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  padding-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s;
+}
+
+.button__icon-wrapper {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  color: var(--clr);
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.button:hover .button__icon-wrapper {
+  color: #000;
+}
+
+.button__icon-svg--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.button:hover .button__icon-svg:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.button:hover .button__icon-svg--copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translate(0);
+}
+
+
+.background {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(50% 50% at 100% 0,
+      #1d1d1d 0% 5%,
+      #000 6% 15%,
+      #1d1d1d 16% 25%,
+      #000 26% 35%,
+      #1d1d1d 36% 45%,
+      #000 46% 55%,
+      #1d1d1d 56% 65%,
+      #000 66% 75%,
+      #1d1d1d 76% 85%,
+      #000 86% 95%,
+      #0000 96%),
+    radial-gradient(50% 50% at 0 100%,
+      #1d1d1d 0% 5%,
+      #000 6% 15%,
+      #1d1d1d 16% 25%,
+      #000 26% 35%,
+      #1d1d1d 36% 45%,
+      #000 46% 55%,
+      #1d1d1d 56% 65%,
+      #000 66% 75%,
+      #1d1d1d 76% 85%,
+      #000 86% 95%,
+      #0000 96%),
+    radial-gradient(50% 50%,
+      #1d1d1d 0% 5%,
+      #000 6% 15%,
+      #1d1d1d 16% 25%,
+      #000 26% 35%,
+      #1d1d1d 36% 45%,
+      #000 46% 55%,
+      #1d1d1d 56% 65%,
+      #000 66% 75%,
+      #1d1d1d 76% 85%,
+      #000 86% 95%,
+      #0000 96%),
+    radial-gradient(50% 50%,
+      #1d1d1d 0% 5%,
+      #000 6% 15%,
+      #1d1d1d 16% 25%,
+      #000 26% 35%,
+      #1d1d1d 36% 45%,
+      #000 46% 55%,
+      #1d1d1d 56% 65%,
+      #000 66% 75%,
+      #1d1d1d 76% 85%,
+      #000 86% 95%,
+      #0000 96%) 38px 38px;
+  background-size: 76px 76px;
+  background-color: #1d1d1d;
+}
+
+.review {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 230px;
+  height: 230px;
+  background: conic-gradient(
+    #ffaa14 calc(var(--percentage) * 1%), 
+    #3c3d37 calc(var(--percentage) * 1%)
+  );
+}
+
+.reviewinside {
+  position: relative;
+  width: 225px;
+  height: 225px;
+  background-color: #181818;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.data {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.percentage {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.review {
+  transition: background 0.5s ease;
 }

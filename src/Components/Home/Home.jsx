@@ -5,9 +5,9 @@ import bg2 from "../../assets/Img/Home/Bg-2.svg";
 import "./Home.css";
 import { Cards } from '../../Pages/Cards/Cards';
 import { useNavigate } from 'react-router-dom';
-import welcomeimg from "../../assets/Img/Home/Welcome.svg"
-import whywe1 from "../../assets/Img/Home/whywe1.svg"
-import whywe2 from "../../assets/Img/Home/whywe2.svg"
+import welcomeimg from "../../assets/Img/Home/Welcome.png"
+import whywe1 from "../../assets/Img/Home/whywe1.png"
+import whywe2 from "../../assets/Img/Home/whywe2.png"
 import Slider from '../../Pages/Slider/Slider';
 import { Loader } from '../../Pages/Loader/Loader';
 
@@ -98,7 +98,7 @@ export const Home = () => {
                 </h1>
                 <div className='w-[90%] lg:w-[80%] flex flex-col lg:flex-row pb-14' align="center">
                     <div className='w-[100%] h-[420px] lg:h-[450px] lg:w-[50%]' align="center">
-                        <img src={welcomeimg} className='rounded' alt="logo" data-aos="fade-right" />
+                        <img src={welcomeimg} className='rounded w-[400px] h-[450px]' alt="logo" data-aos="fade-right" />
                     </div>
                     <div className='w-[100%] h-[450px] flex flex-col justify-center lg:w-[50%]'>
                         <h2 className='text-[25px] text-start font-bold mt-10 lg:mt-0'>We Are Catalysts of Digital Transformation, Propelling Brands Towards Success</h2>

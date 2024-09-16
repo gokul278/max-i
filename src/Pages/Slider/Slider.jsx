@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import Glide from "@glidejs/glide";
 import zadroit from "../../assets/Img/Home/Logo/Zadroit.jpg"
-import big from "../../assets/Img/Home/Logo/big.jpg"
+import big from "../../assets/Img/Home/Logo/Big.jpg"
 
 export default function Slider() {
     useEffect(() => {

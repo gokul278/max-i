@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
-import bg from "../../assets/Img/Home/Bg.svg";
+import bg from "../../assets/Img/Home/Bg.jpg";
 import bg2 from "../../assets/Img/Home/Bg-2.svg";
 import "./Home.css";
 import { Cards } from '../../Pages/Cards/Cards';

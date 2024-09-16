@@ -97,8 +97,8 @@ export const Home = () => {
                     <br /><span className='text-[#ffaa14] underline'>a digital marketing agency</span>
                 </h1>
                 <div className='w-[90%] lg:w-[80%] flex flex-col lg:flex-row pb-14' align="center">
-                    <div className='w-[100%] h-[420px] lg:h-[450px] lg:w-[50%]' align="center">
-                        <img src={welcomeimg} className='rounded w-[400px] h-[450px]' alt="logo" data-aos="fade-right" />
+                    <div className='w-[100%] h-[400px] lg:h-[450px] lg:w-[50%]' align="center">
+                        <img src={welcomeimg} className='rounded w-[100%] lg:w-[400px] h-auto lg:h-[450px]' alt="logo" data-aos="fade-right" />
                     </div>
                     <div className='w-[100%] h-[450px] flex flex-col justify-center lg:w-[50%]'>
                         <h2 className='text-[25px] text-start font-bold mt-10 lg:mt-0'>We Are Catalysts of Digital Transformation, Propelling Brands Towards Success</h2>

@@ -1,4 +1,4 @@
-import bg from "../../assets/Img/Home/Bg.png";
+import bg from "../../assets/Img/Home/Bg.svg";
 import "./Home.css";
 
 export const Home = () => {
@@ -6,7 +6,8 @@ export const Home = () => {
         <div>
             <div className="flex justify-center" style={{ backgroundImage: `url(${bg})`, height: '100vh', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="w-[90%] pt-[100px]">
-                    <div className="w-[40%] mt-[50px] flex justify-center">
+                    <div className="w-[40%] mt-[50px] flex justify-center flex-col">
+                        <h1 className="topic">HEadin</h1>
                         <p className="header text-[#fff] text-[55px] capitalize text-center font-bold tracking-widest">A Digital <br />Marketing<br /> Agency</p>
                     </div>
                 </div>

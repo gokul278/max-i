@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import bg from "../../assets/Img/Home/Bg.svg";
 import bg2 from "../../assets/Img/Home/Bg-2.svg";
@@ -9,13 +9,27 @@ import welcomeimg from "../../assets/Img/Home/Welcome.svg"
 import whywe1 from "../../assets/Img/Home/whywe1.svg"
 import whywe2 from "../../assets/Img/Home/whywe2.svg"
 import Slider from '../../Pages/Slider/Slider';
+import { Loader } from '../../Pages/Loader/Loader';
 
 export const Home = () => {
 
     const navigate = useNavigate();
 
+    const [loadingstatus, setLoadingStatus] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoadingStatus(false)
+        }, 2000); // 2000 milliseconds = 2 seconds
+
+        // Cleanup the timer when the component is unmounted
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <div>
+            {loadingstatus ? <Loader /> : <>
+            </>}
             <div className="flex justify-center h-[60vh] lg:h-screen" style={{ backgroundImage: `url(${bg})`, width: "100%", backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="w-[90%] pt-[100px]">
                     <div className="w-[100%] lg:w-[40%] mt-[50px] flex justify-center flex-col">

@@ -27,6 +27,12 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Function to handle navigation and close the navbar on mobile
+  const handleNavigation = (path) => {
+    navigate(path);
+    setIsToggleOpen(false); // Close the navbar
+  };
+
   return (
     <>
       <header
@@ -92,9 +98,7 @@ export const Header = () => {
                   role="menuitem"
                   aria-haspopup="false"
                   className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${isActive("/") ? "text-[#ffaa14]" : "text-[#fff]"} hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
-                  onClick={() => {
-                    navigate("/")
-                  }}
+                  onClick={() => handleNavigation("/")}
                 >
                   <span>Home</span>
                 </a>
@@ -104,9 +108,7 @@ export const Header = () => {
                   role="menuitem"
                   aria-haspopup="false"
                   className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${isActive("/aboutus") ? "text-[#ffaa14]" : "text-[#fff]"} hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
-                  onClick={() => {
-                    navigate("/aboutus")
-                  }}
+                  onClick={() => handleNavigation("/aboutus")}
                 >
                   <span>About Us</span>
                 </a>
@@ -116,9 +118,7 @@ export const Header = () => {
                   role="menuitem"
                   aria-haspopup="false"
                   className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${isActive("/services") ? "text-[#ffaa14]" : "text-[#fff]"} hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
-                  onClick={() => {
-                    navigate("/services")
-                  }}
+                  onClick={() => handleNavigation("/services")}
                 >
                   <span>Our Services</span>
                 </a>
@@ -128,9 +128,7 @@ export const Header = () => {
                   role="menuitem"
                   aria-haspopup="false"
                   className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${isActive("/works") ? "text-[#ffaa14]" : "text-[#fff]"} hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
-                  onClick={() => {
-                    navigate("/works")
-                  }}
+                  onClick={() => handleNavigation("/works")}
                 >
                   <span>Our Works</span>
                 </a>
@@ -140,9 +138,7 @@ export const Header = () => {
                   role="menuitem"
                   aria-haspopup="false"
                   className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${isActive("/contact") ? "text-[#ffaa14]" : "text-[#fff]"} hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
-                  onClick={() => {
-                    navigate("/contact")
-                  }}
+                  onClick={() => handleNavigation("/contact")}
                 >
                   <span>Contact Us</span>
                 </a>

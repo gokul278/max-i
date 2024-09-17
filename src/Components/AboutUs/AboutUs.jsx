@@ -3,7 +3,7 @@ import { Loader } from '../../Pages/Loader/Loader';
 import { useNavigate } from "react-router-dom";
 import poster from "../../assets/Img/Aboutus/Poster.jpg";
 import Mainbg from "../../assets/Img/Aboutus/Mainbg.jpg"
-import bg from "../../assets/Img/Aboutus/bg.jpg";
+import bg from "../../assets/Img/Aboutus/Bg.jpg";
 import "./AboutUs.css"
 
 export const AboutUs = () => {

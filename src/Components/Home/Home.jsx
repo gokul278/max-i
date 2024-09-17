@@ -20,7 +20,7 @@ export const Home = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoadingStatus(false)
-        }, 2000); // 2000 milliseconds = 2 seconds
+        }, 1000); // 1000 milliseconds = 1 seconds
 
         // Cleanup the timer when the component is unmounted
         return () => clearTimeout(timer);
@@ -28,8 +28,7 @@ export const Home = () => {
 
     return (
         <div>
-            {loadingstatus ? <Loader /> : <>
-            </>}
+            {loadingstatus ? <Loader /> : <></>}
             <div className="flex justify-center h-[60vh] lg:h-screen" style={{ backgroundImage: `url(${bg})`, width: "100%", backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="w-[90%] pt-[100px]">
                     <div className="w-[100%] lg:w-[40%] mt-[50px] flex justify-center flex-col">
@@ -101,6 +100,7 @@ export const Home = () => {
                         <img src={welcomeimg} className='rounded w-[100%] lg:w-[400px] h-auto lg:h-[450px]' alt="logo" data-aos="fade-right" />
                     </div>
                     <div className='w-[100%] h-[450px] flex flex-col justify-center lg:w-[50%]'>
+                        <div data-aos="fade-right">
                         <h2 className='text-[25px] text-start font-bold mt-10 lg:mt-0'>We Are Catalysts of Digital Transformation, Propelling Brands Towards Success</h2>
                         <p className='text-justify text-[16px] font-normal mt-5'>Welcome to Max-I, a digital marketing agency where creativity meets strategy and innovation thrives! We are a dynamic team of passionate digital marketers dedicated to helping businesses unlock their full potential in the online realm. We develop growth-oriented online marketing campaigns that make a positive impact on businesses.</p>
                         <p className='text-justify text-[16px] font-normal mt-5'>Partner with Us for Business Excellence</p>
@@ -138,6 +138,7 @@ export const Home = () => {
                                 Explore Our Service
                             </button>
                         </div>
+                        </div>
                     </div>
 
                 </div>
@@ -146,11 +147,11 @@ export const Home = () => {
 
             <div className='w-[100%] bg-[#ffaa14] py-14' align="center">
                 <h1 className='text-[50px] font-bold capitalize text-[#000]' data-aos="fade-up" align="center">What We Do ?</h1>
-                <div className='w-[90%] lg:w-[80%] flex flex-col lg:flex-row' align="center">
+                <div className='w-[90%] lg:w-[80%] flex flex-col lg:flex-row' align="center" data-aos="fade-right">
                     <div className='w-[100%] h-[600px] lg:h-[450px] flex flex-col lg:w-[60%]'>
-                        <h2 className='text-[25px] text-start font-bold mt-[10px] lg:mt-[50px]'>Max-I</h2>
-                        <p className='text-justify text-[16px] font-normal mt-5'>Max-I is a leading digital marketing agency that specializes in creating dynamic online strategies tailored to each client's unique needs. Our team of passionate marketers is dedicated to helping businesses unlock their full potential in the digital realm by developing growth-oriented campaigns that drive engagement, boost visibility, and generate meaningful results.</p>
-                        <p className='text-justify text-[16px] font-normal mt-5'>At Max-I, we blend creativity with data-driven insights to craft compelling digital experiences that resonate with audiences and drive conversions. Whether it's optimizing your website for search engines, crafting engaging social media campaigns, or designing user-friendly websites, we harness the power of digital marketing to help businesses thrive in today's competitive landscape.</p>
+                        <h2 className='text-[30px] text-start font-bold mt-[10px] lg:mt-[50px]'>Max-I</h2>
+                        <p className='text-justify text-[17px] font-normal mt-5'>Max-I is a leading digital marketing agency that specializes in creating dynamic online strategies tailored to each client's unique needs. Our team of passionate marketers is dedicated to helping businesses unlock their full potential in the digital realm by developing growth-oriented campaigns that drive engagement, boost visibility, and generate meaningful results.</p>
+                        <p className='text-justify text-[17px] font-normal mt-5'>At Max-I, we blend creativity with data-driven insights to craft compelling digital experiences that resonate with audiences and drive conversions. Whether it's optimizing your website for search engines, crafting engaging social media campaigns, or designing user-friendly websites, we harness the power of digital marketing to help businesses thrive in today's competitive landscape.</p>
                     </div>
                     <div className='w-[100%] h-[350px] lg:h-[430px] lg:w-[40%] lg:mt-0 flex flex-col justify-center items-start lg:items-center' align="center">
                         <img src={whywe1} className='w-[250px] h-[250px] rounded' alt="img" data-aos="fade-right" />
@@ -163,7 +164,7 @@ export const Home = () => {
             <div className="background py-10">
                 <div className='w-[100%] lg:w-[100%] flex justify-center items-center flex-wrap gap-16'>
                     <div>
-                        <div className='w-[230px] h-[230px] review' style={{ '--percentage': 99 }} data-aos="flip-right">
+                        <div className='w-[230px] h-[230px] review' style={{ '--percentage': 99 }} data-aos="fade-right">
                             <div className='reviewinside'>
                                 <div className='data'>99</div>
                                 <div className='percentage'>%</div>
@@ -172,7 +173,7 @@ export const Home = () => {
                         <h1 className='text-[#fff] text-[23px] font-semibold mt-5 uppercase' align="center">Client Satifaction</h1>
                     </div>
                     <div>
-                        <div className='w-[230px] h-[230px] review' style={{ '--percentage': 87 }} data-aos="flip-right">
+                        <div className='w-[230px] h-[230px] review' style={{ '--percentage': 87 }} data-aos="fade-right" data-aos-delay="100">
                             <div className='reviewinside'>
                                 <div className='data'>87</div>
                                 <div className='percentage'>%</div>
@@ -181,7 +182,7 @@ export const Home = () => {
                         <h1 className='text-[#fff] text-[23px] font-semibold mt-5 uppercase' align="center">cup of coffee</h1>
                     </div>
                     <div>
-                        <div className='w-[230px] h-[230px] review' style={{ '--percentage': 95 }} data-aos="flip-right">
+                        <div className='w-[230px] h-[230px] review' style={{ '--percentage': 95 }} data-aos="fade-right" data-aos-delay="200">
                             <div className='reviewinside'>
                                 <div className='data'>95</div>
                                 <div className='percentage'>%</div>
@@ -190,7 +191,7 @@ export const Home = () => {
                         <h1 className='text-[#fff] text-[23px] font-semibold mt-5 uppercase' align="center">productivity</h1>
                     </div>
                     <div>
-                        <div className='w-[230px] h-[230px] review' style={{ '--percentage': 91 }} data-aos="flip-right">
+                        <div className='w-[230px] h-[230px] review' style={{ '--percentage': 91 }} data-aos="fade-right" data-aos-delay="300">
                             <div className='reviewinside'>
                                 <div className='data'>91</div>
                                 <div className='percentage'>%</div>

@@ -93,7 +93,7 @@ export const Footer = () => {
                         </a>
                     </div>
                 </div>
-                <div className="w-[90%] lg:w-[20%]">
+                <div className="w-[90%] lg:w-[15%]">
                     <h1 className="text-[#ffaa14] text-[30px] font-bold">Useful Links.</h1>
                     <div
                         className={`mt-10 cursor-pointer font-semibold ${isActive("/") ? "text-[#ffaa14]" : "text-[#fff]"

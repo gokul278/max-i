@@ -22,7 +22,7 @@ export const AboutUs = () => {
   }, []);
 
   return (
-    <div className="bg-[#F5F7F8]">
+    <div className="bg-[#f5f7f8]">
       {loadingstatus ? <Loader /> : <></>}
       <div className="h-[60vh] flex flex-col justify-center items-center" style={{ backgroundImage: `url(${poster})`, width: "100%", backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <h1 className="text-[40px] text-[#fff] uppercase font-bold">About US</h1>
@@ -33,7 +33,7 @@ export const AboutUs = () => {
       <div className='w-[100%] bg-[#F5F7F8] pt-10' align="center">
         <h1 className=' w-[90%] lg:-[100%] text-[40px] font-bold capitalize text-[#000] py-10' data-aos="fade-up" align="center">About Us <br /><span className="text-[#ffaa14]">MAX-I</span>
         </h1>
-        <div className='w-[90%] lg:w-[70%] flex flex-col lg:flex-row pb-14' align="center">
+        <div className='w-[90%] lg:w-[80%] flex flex-col lg:flex-row pb-14' align="center">
           <div className='w-[100%] lg:w-[50%]' align="center">
             <img src={Mainbg} className='rounded w-[100%] lg:w-[300px] lg:h-[300px]' alt="logo" data-aos="fade-right" />
           </div>
@@ -45,8 +45,8 @@ export const AboutUs = () => {
         </div>
       </div>
 
-      <div style={{ backgroundImage: `url(${bg})`, width: "100%", backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className='w-[100%] lg:pt-10' align="center">
+      <div className="mb-8" style={{ backgroundImage: `url(${bg})`, width: "100%", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className='w-[100%] pt-10 lg:pt-10' align="center">
           <div className='w-[90%] lg:w-[70%] flex flex-col lg:flex-row pb-14' align="center">
             <div className='w-[100%] lg:w-[30%]' align="center">
               <div className="w-[80px] h-[80px] bg-[#ffaa14] rounded-[50px] flex justify-center items-center text-[#fff] font-bold text-[25px]" data-aos="flip-left">01</div>
@@ -68,7 +68,7 @@ export const AboutUs = () => {
               &nbsp;&nbsp;<div className="text-[#000] font-bold text-[25px] mt-[-10px]">Our Vision</div>
             </div>
 
-            <div className='w-[100%] flex flex-col justify-center lg:w-[70%] '>
+            <div className='w-[100%] flex flex-col justify-center mt-8 lg:mt-0 lg:w-[70%] '>
               <div data-aos="fade-right" data-aos-delay="100">
                 <p className='text-justify text-[18px] font-semibold'>Our vision at Max-I is to be the trailblazer of digital evolution, sculpting bespoke digital ecosystems that transcend boundaries and redefine industry standards. We envision a dynamic digital landscape where brands not only engage but inspire, leveraging our strategic prowess and innovative technologies to create immersive experiences, foster genuine connections, and drive sustainable growth in the digital frontier.</p>
               </div>
@@ -82,6 +82,10 @@ export const AboutUs = () => {
         </div>
 
 
+      </div>
+
+      <div className="bg-[#f5f7f8]">
+        <br />
       </div>
     </div>
   )

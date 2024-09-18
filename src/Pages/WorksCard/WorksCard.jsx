@@ -8,7 +8,7 @@ export const WorksCard = () => {
     const [modalImage, setModalImage] = useState(null); // State to store the selected image for the modal
     const [isModalOpen, setIsModalOpen] = useState(false); // State to track whether the modal is open
 
-    const cardui = " w-[350px] h-[430px] lg:h-[460px] cursor-pointer relative group overflow-hidden";
+    const cardui = " w-[350px] h-[445px] lg:h-[460px] cursor-pointer relative group overflow-hidden";
     const cardimg = "transition-transform duration-300 ease-in-out";
     const heading = "w-[100%] h-[40px] bg-[#ffaa14] rounded-t-lg text-[18px] font-bold flex justify-center items-center";
     const button = "w-[100px] absolute opacity-0 transition-opacity duration-300 ease-in-out bg-[#ffaa14] text-[#fff] text-[15px] py-2 px-4 rounded group-hover:opacity-100";
@@ -31,7 +31,7 @@ export const WorksCard = () => {
     };
 
     return (
-        <div className='w-[100%] flex flex-wrap justify-center gap-x-10 gap-y-5'>
+        <div className='w-[100%] flex flex-wrap justify-center gap-x-10 gap-y-8'>
             {cardData.map((card, index) => (
                 <div key={index} className={cardui} align="center">
                     <img className={cardimg} src={card.img} alt={card.name} />
@@ -52,14 +52,20 @@ export const WorksCard = () => {
 
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50" onClick={handleCloseModal}>
-                    <div className="relative" onClick={(e) => e.stopPropagation()}>
-                        <img src={modalImage} alt="Modal" className="max-w-[90vw] max-h-[90vh] rounded-lg" />
-                        <button
-                            className="absolute top-2 right-2 text-black text-2xl"
-                            onClick={handleCloseModal}
-                        >
-                            &times;
-                        </button>
+                    <div className="relative w-[100%]" onClick={(e) => e.stopPropagation()}>
+                        <div className='w-[80%] mb-5' align="end">
+                            <button
+                                className="bg-[red] text-[#fff] rounded-full px-[11px] py-[5px]"
+                                onClick={handleCloseModal}
+                            >
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                        <div className='w-[80%] h-[80vh] overflow-auto'>
+
+                            <img src={modalImage} alt="Modal" className="w-[100%] rounded-lg" />
+
+                        </div>
                     </div>
                 </div>
             )}

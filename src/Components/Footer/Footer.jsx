@@ -124,19 +124,26 @@ export const Footer = () => {
                         <i className="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Our Works
                     </div>
                     <div
+                        className={`mt-4 cursor-pointer font-semibold ${isActive("/works") ? "text-[#ffaa14]" : "text-[#fff]"
+                            } hover:text-[#ffaa14]`}
+                        onClick={() => navigate("/blogs")}
+                    >
+                        <i className="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Our Blogs
+                    </div>
+                    <div
                         className={`mt-4 cursor-pointer font-semibold ${isActive("/contact") ? "text-[#ffaa14]" : "text-[#fff]"
                             } hover:text-[#ffaa14]`}
                         onClick={() => navigate("/contact")}
                     >
                         <i className="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Contact Us
                     </div>
-                    <div
+                    {/* <div
                         className={`mt-4 cursor-pointer font-semibold ${isActive("/privacy") ? "text-[#ffaa14]" : "text-[#fff]"
                             } hover:text-[#ffaa14]`}
                         onClick={() => navigate("/privacy")}
                     >
                         <i className="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Privacy Policy
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="w-[100%] h-[2px] bg-[#ffaa14]"></div>

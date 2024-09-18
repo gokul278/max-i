@@ -137,6 +137,16 @@ export const Header = () => {
                 <a
                   role="menuitem"
                   aria-haspopup="false"
+                  className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${isActive("/blogs") ? "text-[#ffaa14]" : "text-[#fff]"} hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
+                  onClick={() => handleNavigation("/blogs")}
+                >
+                  <span>Our Blogs</span>
+                </a>
+              </li>
+              <li role="none" className="flex items-stretch">
+                <a
+                  role="menuitem"
+                  aria-haspopup="false"
                   className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${isActive("/contact") ? "text-[#ffaa14]" : "text-[#fff]"} hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
                   onClick={() => handleNavigation("/contact")}
                 >

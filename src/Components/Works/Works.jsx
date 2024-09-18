@@ -28,7 +28,7 @@ export const Works = () => {
 
 
       <div className="w-[100%]" align="center">
-      <div className="py-10 w-[90%]">
+      <div className="py-20 w-[90%]">
         <WorksCard />
       </div>
       </div>

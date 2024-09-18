@@ -3,8 +3,7 @@
 }
 
 .card-container:hover {
-    transform: scale(2);
-    background-color: #000; /* Black background on hover */
+    background-image: url("../../assets/Img/ServiceCardBg.jpg"); /* Black background on hover */
     color: #fff; /* White text color on hover */
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Add a deeper shadow effect */
 }

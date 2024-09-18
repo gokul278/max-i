@@ -1,11 +1,16 @@
 .card-container {
+    font-weight: 500;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .card-container:hover {
-    background-image: url("../../assets/Img/ServiceCardBg.jpg"); /* Black background on hover */
-    color: #fff; /* White text color on hover */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Add a deeper shadow effect */
+    background-image: url("../../assets/Img/ServiceCardBg.jpg");
+    /* Black background on hover */
+    color: #fff;
+    /* White text color on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+    /* Add a deeper shadow effect */
 }
 
 .card-icon {
@@ -13,5 +18,6 @@
 }
 
 .card-icon:hover {
-    transform: rotate(15deg); /* Rotate the icon slightly on hover */
+    transform: rotate(15deg);
+    /* Rotate the icon slightly on hover */
 }

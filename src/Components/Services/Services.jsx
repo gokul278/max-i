@@ -33,8 +33,10 @@ export const Services = () => {
                 </div>
             </div>
 
-            <div className='w-[100%] flex justify-center gap-14 flex-wrap items-center mt-10 pb-20'>
-                <ServiceCards />
+            <div className="w-[100%]" align="center">
+                <div className='w-[100%] lg:w-[80%] flex justify-center gap-14 flex-wrap items-center mt-10 pb-20' align="center">
+                    <ServiceCards />
+                </div>
             </div>
         </div>
     )

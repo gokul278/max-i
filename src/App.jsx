@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate  } from "react-router-dom";
 import { Home } from "./Components/Home/Home";
 import { AboutUs } from "./Components/AboutUs/AboutUs";
 import { Header } from "./Components/Header/Header";
@@ -22,7 +22,7 @@ function App() {
         <Route path="/contact" element={<Contactus />} />
         <Route path="/works" element={<Works />} />
         <Route path="/works/webdesigns" element={<WebDesigns />} />
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<Navigate to="/" />} />
         {/* <Route path="/blogs" element={<Blogs />} /> */}
       </Routes>
       <Footer />

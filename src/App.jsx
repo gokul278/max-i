@@ -8,6 +8,7 @@ import { Contactus } from "./Components/ContactUs/Contactus";
 import { Works } from "./Components/Works/Works";
 import ScrollToTop from "./Pages/ScrollToTop/ScrollToTop";
 import { Blogs } from "./Components/Blogs/Blogs";
+import { WebDesigns } from "./Components/WebDesigns/WebDesigns";
 
 function App() {
   return (
@@ -20,7 +21,9 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contactus />} />
         <Route path="/works" element={<Works />} />
-        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/works/webdesigns" element={<WebDesigns />} />
+        <Route path="*" element={<Home />} />
+        {/* <Route path="/blogs" element={<Blogs />} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>

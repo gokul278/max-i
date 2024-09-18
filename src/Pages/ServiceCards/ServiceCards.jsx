@@ -23,7 +23,7 @@ export const ServiceCards = () => {
                     <img src={search} alt="logo" />
                 </div>
                 <h1 className="font-bold text-xl capitalize">Search Engine Optimisation(SEO)</h1>
-                <p className="text-[15px] h-[240px] lg:h-[200px] text-zinc-500 leading-6 capitalize text-justify">
+                <p className="text-[15px] h-[240px] lg:h-[200px] text-zinc-500 leading-6 text-justify">
                     We specialize in providing SEO solutions tailored to help businesses enhance their online visibility, generate more leads, and boost revenue. With our expertise in white hat SEO practices, we craft customized strategies to address your unique business goals, delivering measurable results and tangible ROI.
                 </p>
                 <p className="text-[15px] text-zinc-500 leading-6 capitalize text-justify">
@@ -47,8 +47,8 @@ export const ServiceCards = () => {
                     <img src={Settings} alt="logo" />
                 </div>
                 <h1 className="font-bold text-xl capitalize">Search Engine Marketing</h1>
-                <p className="text-[15px] h-[290px] lg:h-[200px] text-zinc-500 leading-6 capitalize text-justify">
-                    At Max-I, we craft bespoke growth strategies that seamlessly integrate with your business goals, ensuring every marketing effort is purpose-driven and results-oriented." "By analyzing your target audience's search behaviors across their purchase cycles, we tailor SEM campaigns that resonate at each touchpoint, propelling prospects towards meaningful brand engagements.
+                <p className="text-[15px] h-[290px] lg:h-[200px] text-zinc-500 leading-6 text-justify">
+                    At Max-I, we craft bespoke growth strategies that seamlessly integrate with your business goals, ensuring every marketing effort is purpose-driven and results-oriented. By analyzing your target audience's search behaviors across their purchase cycles, we tailor SEM campaigns that resonate at each touchpoint, propelling prospects towards meaningful brand engagements.
                 </p>
                 <p className="text-[15px] text-zinc-500 leading-6 capitalize text-justify">
                     <div className='flex flex-wrap justify-start gap-x-3'>
@@ -71,7 +71,7 @@ export const ServiceCards = () => {
                     <img src={content} alt="logo" />
                 </div>
                 <h1 className="font-bold text-xl capitalize">Content Marketing</h1>
-                <p className="text-[15px] h-[200px] text-zinc-500 leading-6 capitalize text-justify">
+                <p className="text-[15px] h-[200px] text-zinc-500 leading-6 text-justify">
                     Our content marketing services engage audiences, build brand authority, and boost conversions. We create valuable content for blogs, social media, and email campaigns, attracting and retaining customers. With strategic campaigns, we fuel online growth, helping businesses succeed in the digital landscape.
                 </p>
             </div>
@@ -87,7 +87,7 @@ export const ServiceCards = () => {
                     <img src={webdesign} alt="logo" />
                 </div>
                 <h1 className="font-bold text-xl capitalize">Web Design</h1>
-                <p className="text-[15px] h-[200px] text-zinc-500 leading-6 capitalize text-justify">
+                <p className="text-[15px] h-[200px] text-zinc-500 leading-6 text-justify">
                     In today's digital landscape, having a user-friendly website is essential, but it's equally crucial for it to be SEO-friendly. Our website development strategy focuses on striking the perfect balance between aesthetics, functionality, and search engine optimization, ensuring your site attracts and retains visitors while also ranking well organically.
                 </p>
             </div>
@@ -103,7 +103,7 @@ export const ServiceCards = () => {
                     <img src={brand} alt="logo" />
                 </div>
                 <h1 className="font-bold text-xl capitalize">Brand Management</h1>
-                <p className="text-[15px] h-[200px] text-zinc-500 leading-6 capitalize text-justify">
+                <p className="text-[15px] h-[200px] text-zinc-500 leading-6 text-justify">
                     Our brand management services encompass strategic planning, identity development, reputation management, and ongoing brand enhancement to ensure your brand resonates with your target audience. Achieve brand differentiation and relevance in your industry with our strategic approach, focusing on brand positioning, market insights, and continuous improvement.
                 </p>
             </div>
@@ -120,7 +120,7 @@ export const ServiceCards = () => {
                     <img src={app} alt="logo" />
                 </div>
                 <h1 className="font-bold text-xl capitalize">App store optimization (ASO)</h1>
-                <p className="text-[15px] h-[200px] text-zinc-500 leading-6 capitalize text-justify">
+                <p className="text-[15px] h-[200px] text-zinc-500 leading-6 text-justify">
                     Our app store optimization (ASO) strategies are meticulously crafted to elevate your app's visibility, driving organic downloads and user engagement. Drive app success with our comprehensive ASO solutions, designed to optimize keywords, enhance app descriptions, and elevate user experiences for sustained growth.
                 </p>
             </div>
@@ -137,7 +137,7 @@ export const ServiceCards = () => {
                     <img src={media} alt="logo" />
                 </div>
                 <h1 className="font-bold text-xl capitalize">Social Media Advertising</h1>
-                <p className="text-[15px] h-[200px] text-zinc-500 leading-6 capitalize text-justify">
+                <p className="text-[15px] h-[200px] text-zinc-500 leading-6 text-justify">
                     Our social media advertising strategies are geared towards amplifying your brand's reach, driving meaningful engagements, and fostering lasting connections with your target audience. Achieve your business objectives with data-driven advertising, designed to optimize ad performance, drive traffic, and generate valuable leads.
                 </p>
             </div>

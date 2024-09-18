@@ -19,7 +19,7 @@ export const Cards = () => {
                     <img src={digital} alt="logo" />
                 </div>
                 <h1 className="font-bold text-xl capitalize">Digital marketing</h1>
-                <p className="text-[15px] text-zinc-500 leading-6 capitalize">
+                <p className="text-[15px] text-zinc-500 leading-6">
                     Our social media advertising strategies are geared towards amplifying your brand's reach, driving meaningful engagements, and fostering connections.
                 </p>
             </div>
@@ -35,7 +35,7 @@ export const Cards = () => {
                     <img src={web} alt="logo" />
                 </div>
                 <h1 className="font-bold text-xl capitalize">Web design</h1>
-                <p className="text-[15px] text-zinc-500 leading-6 capitalize">
+                <p className="text-[15px] text-zinc-500 leading-6">
                     In today's digital landscape, having a user-friendly website is essential, but it's equally crucial for it to be SEO-friendly. Our website development strategy focuses.
                 </p>
             </div>
@@ -51,7 +51,7 @@ export const Cards = () => {
                     <img src={search} alt="logo" />
                 </div>
                 <h1 className="font-bold text-xl capitalize">SEO</h1>
-                <p className="text-[15px] text-zinc-500 leading-6 capitalize">
+                <p className="text-[15px] text-zinc-500 leading-6">
                     We specialize in providing SEO solutions tailored to help businesses enhance their online visibility, generate more leads, and boost revenue.
                 </p>
             </div>

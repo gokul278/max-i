@@ -8,7 +8,7 @@ export const WorksCard = () => {
     const [modalImage, setModalImage] = useState(null); // State to store the selected image for the modal
     const [isModalOpen, setIsModalOpen] = useState(false); // State to track whether the modal is open
 
-    const cardui = " w-[350px] h-[445px] lg:h-[460px] cursor-pointer relative group overflow-hidden";
+    const cardui = " w-[350px] h-[auto] lg:h-[460px] cursor-pointer relative group overflow-hidden";
     const cardimg = "transition-transform duration-300 ease-in-out";
     const heading = "w-[100%] h-[40px] bg-[#ffaa14] rounded-t-lg text-[18px] font-bold flex justify-center items-center";
     const button = "w-[100px] absolute opacity-0 transition-opacity duration-300 ease-in-out bg-[#ffaa14] text-[#fff] text-[15px] py-2 px-4 rounded group-hover:opacity-100";
@@ -55,7 +55,7 @@ export const WorksCard = () => {
                     <div className="relative w-[100%]" onClick={(e) => e.stopPropagation()}>
                         <div className='w-[80%] mb-5' align="end">
                             <button
-                                className="bg-[red] text-[#fff] rounded-full px-[11px] py-[5px]"
+                                className="bg-[#ffaa14] text-[#fff] rounded-full px-[11px] py-[5px]"
                                 onClick={handleCloseModal}
                             >
                                 <i class="fa-solid fa-xmark"></i>

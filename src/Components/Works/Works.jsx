@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Loader } from '../../Pages/Loader/Loader';
 import poster from "../../assets/Img/Works/Poster.jpg";
-import { WorksCard } from "../../Pages/WorksCard/WorksCard";
+import { WorksCategory } from "../../Pages/WorksCategory/WorksCategory";
 
 export const Works = () => {
 
@@ -27,10 +27,10 @@ export const Works = () => {
       </div>
 
 
-      <div className="w-[100%]" align="center">
-      <div className="py-20 w-[90%]">
-        <WorksCard />
-      </div>
+      <div className="w-[100%] py-10" align="center">
+        <div className="w-[75%]">
+        <WorksCategory />
+        </div>
       </div>
 
     </div>

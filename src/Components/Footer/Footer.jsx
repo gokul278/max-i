@@ -117,19 +117,19 @@ export const Footer = () => {
                         <i className="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Our Services
                     </div>
                     <div
-                        className={`mt-4 cursor-pointer font-semibold ${isActive("/works") ? "text-[#ffaa14]" : "text-[#fff]"
+                        className={`mt-4 cursor-pointer font-semibold ${isActive("/works") || isActive("/works/webdesigns") ? "text-[#ffaa14]" : "text-[#fff]"
                             } hover:text-[#ffaa14]`}
                         onClick={() => navigate("/works")}
                     >
                         <i className="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Our Works
                     </div>
-                    <div
+                    {/* <div
                         className={`mt-4 cursor-pointer font-semibold ${isActive("/works") ? "text-[#ffaa14]" : "text-[#fff]"
                             } hover:text-[#ffaa14]`}
                         onClick={() => navigate("/blogs")}
                     >
                         <i className="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Our Blogs
-                    </div>
+                    </div> */}
                     <div
                         className={`mt-4 cursor-pointer font-semibold ${isActive("/contact") ? "text-[#ffaa14]" : "text-[#fff]"
                             } hover:text-[#ffaa14]`}

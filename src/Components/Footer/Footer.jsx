@@ -117,7 +117,7 @@ export const Footer = () => {
                         <i className="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Our Services
                     </div>
                     <div
-                        className={`mt-4 cursor-pointer font-semibold ${isActive("/works") || isActive("/works/webdesigns") ? "text-[#ffaa14]" : "text-[#fff]"
+                        className={`mt-4 cursor-pointer font-semibold ${isActive("/works") || isActive("/works/webdesigns") || isActive("/works/logodesigns") || isActive("/works/printposters") || isActive("/works/socialmediaposters") || isActive("/works/videos") ? "text-[#ffaa14]" : "text-[#fff]"
                             } hover:text-[#ffaa14]`}
                         onClick={() => navigate("/works")}
                     >

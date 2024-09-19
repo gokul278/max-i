@@ -1,5 +1,9 @@
 import React from 'react'
-import img from "../../assets/Img/Works/WorkCategory/Img.jpg";
+import Website from "../../assets/Img/Works/WorkCategory/Website.png";
+import Logo from "../../assets/Img/Works/WorkCategory/Logo.png";
+import PrintPosters from "../../assets/Img/Works/WorkCategory/Print Posters.png";
+import SocialMediaPosters from "../../assets/Img/Works/WorkCategory/Social Media Posters.png";
+import Videos from "../../assets/Img/Works/WorkCategory/Videos.png";
 import { useNavigate } from 'react-router-dom';
 
 export const WorksCategory = () => {
@@ -8,22 +12,27 @@ export const WorksCategory = () => {
 
     const categoryData = [
         {
-            img: img,
+            img: Logo,
             name: "Logo Designs",
             link: "/logodesigns"
         },
         {
-            img: img,
+            img: Website,
             name: "Web Designs",
             link: "/webdesigns"
         },
         {
-            img: img,
-            name: "Poster Designs",
-            link: "/posterdesigns"
+            img: PrintPosters,
+            name: "Print Posters",
+            link: "/printposters"
         },
         {
-            img: img,
+            img: SocialMediaPosters,
+            name: "Social Media Posters",
+            link: "/socialmediaposters"
+        },
+        {
+            img: Videos,
             name: "Videos",
             link: "/videos"
         }

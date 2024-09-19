@@ -127,7 +127,7 @@ export const Header = () => {
                 <a
                   role="menuitem"
                   aria-haspopup="false"
-                  className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${isActive("/works") || isActive("/works/webdesigns") ? "text-[#ffaa14]" : "text-[#fff]"} hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
+                  className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${isActive("/works") || isActive("/works/webdesigns") || isActive("/works/logodesigns") || isActive("/works/printposters") || isActive("/works/socialmediaposters") || isActive("/works/videos") ? "text-[#ffaa14]" : "text-[#fff]"} hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
                   onClick={() => handleNavigation("/works")}
                 >
                   <span>Our Works</span>

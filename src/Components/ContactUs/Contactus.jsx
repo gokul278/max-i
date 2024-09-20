@@ -20,7 +20,7 @@ export const Contactus = () => {
     }, []);
 
     return (
-        <div className="bg-[#fff]">
+        <div className="bg-[#F5F7F8]">
             {loadingstatus ? <Loader /> : <></>}
             <div className="h-[60vh] flex flex-col justify-center items-center" style={{ backgroundImage: `url(${poster})`, width: "100%", backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <h1 className="text-[40px] text-[#fff] uppercase font-bold">Conatct Us</h1>
@@ -118,12 +118,12 @@ export const Contactus = () => {
                 </div>
 
 
-                <div className="w-[90%] lg:w-[75%] h-[450px] mt-10 mb-20">
+                <div className="w-[90%] lg:w-[75%] h-[450px] mt-5 lg:mt-10 mb-20">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3907.6855225128643!2d78.1524955!3d11.6457436!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf02bb4fa4d13%3A0xf3ada7f3555f0f5f!2s38%2F37B%2C%20Logi%20Chetty%20Street%20Number%201%2C%20Logi%20Street%2C%20Gugai%2C%20Salem%2C%20Tamil%20Nadu%20636006!5e0!3m2!1sen!2sin!4v1726567998067!5m2!1sen!2sin"
                         width="100%"
                         height="100%"
-                        style={{ border: "0" }}
+                        style={{ border: "0", borderRadius:"5px" }}
                         allowfullscreen=""
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"></iframe>

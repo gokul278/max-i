@@ -1,17 +1,25 @@
 import React, { useState } from 'react';
 import logoimg from "../../assets/Img/Works/Img.jpg";
+import chillax from "../../assets/Img/Works/LogoDesigns/chillax.png"
+import swiss from "../../assets/Img/Works/LogoDesigns/swiss.png";
+import movenpack from "../../assets/Img/Works/LogoDesigns/movenpack.png";
+import brandnew from "../../assets/Img/Works/LogoDesigns/brandnewoutlet.png";
+import smarthandy from "../../assets/Img/Works/LogoDesigns/smarthandy.png";
 export const LogoCard = () => {
     const [modalImage, setModalImage] = useState(null); // State to store the selected image for the modal
     const [isModalOpen, setIsModalOpen] = useState(false); // State to track whether the modal is open
 
     const cardui = " w-[350px] h-[auto] cursor-pointer relative group overflow-hidden";
-    const cardimg = "transition-transform duration-300 ease-in-out rounded-t-md ";
+    const cardimg = "w-[300px] h-[200px] transition-transform duration-300 ease-in-out rounded-t-md ";
     const heading = "w-[100%] h-[40px] bg-[#ffaa14] rounded-b-md text-[18px] font-bold flex justify-center items-center";
     const button = "w-[100px] absolute opacity-0 transition-opacity duration-300 ease-in-out bg-[#ffaa14] text-[#fff] text-[15px] py-2 px-4 rounded group-hover:opacity-100";
 
     const cardData = [
-        { name: "Logo", img: logoimg, fullimg: logoimg, link: "https://www.google.com/" },
-        { name: "Logo", img: logoimg, fullimg: logoimg, link: "https://www.google.com/" },
+        { name: "Chillax", img: chillax, fullimg: chillax},
+        { name: "My Swiss Tamil", img: swiss, fullimg: swiss},
+        { name: "Move N Pack", img: movenpack, fullimg: movenpack},
+        { name: "Brands New Outlet", img: brandnew, fullimg: brandnew},
+        { name: "Smart Handy Reparatur", img: smarthandy, fullimg: smarthandy},
     ];
 
     // Function to handle opening the modal with the selected image

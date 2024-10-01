@@ -33,7 +33,7 @@ export const Works = () => {
         }}
       >
         <h1 className="text-[40px] text-[#fff] uppercase font-bold">
-          {t("nav.about")}
+          {t("nav.works")}
         </h1>
         <h6 className="text-[18px] text-[#fff] mt-3 uppercase font-semibold flex justify-center items-center cursor-pointer">
           <div
@@ -50,7 +50,7 @@ export const Works = () => {
               navigate("/works");
             }}
           >
-            {t("nav.about")}
+            {t("nav.works")}
           </div>
         </h6>
       </div>

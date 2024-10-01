@@ -4,8 +4,10 @@ import zadroit from "../../assets/Img/Home/Logo/Zadroit.jpg"
 import big from "../../assets/Img/Home/Logo/Big.jpg"
 import qbex from "../../assets/Img/Home/Logo/qbex.jpg"
 import behero from "../../assets/Img/Home/Logo/behero.jpg"
+import { useTranslation } from "react-i18next";
 
 export default function Slider() {
+    const { t, i18n } = useTranslation("global");
     useEffect(() => {
         const slider = new Glide(".glide-08", {
             type: "slider",
@@ -43,7 +45,7 @@ export default function Slider() {
                                         <figure className="relative z-10">
                                             <div className="p-6 text-lg leading-loose g:text-xl">
                                                 <p>
-                                                    "Max-I's comprehensive digital solutions elevated our online presence across platforms. From LinkedIn lead generation to SEO and social media management, they delivered outstanding results for our IT solutions."
+                                                    {t("home.reviewzadroit")}
                                                 </p>
                                             </div>
                                             <figcaption className="flex flex-col items-center gap-2 p-6 text-sm text-[#ffaa14]">
@@ -89,7 +91,7 @@ export default function Slider() {
                                         <figure className="relative z-10">
                                             <div className="p-6 text-lg leading-loose g:text-xl">
                                                 <p>
-                                                    " Max-I revolutionized our social media game, making us digital heroes! Their strategies boosted our engagement and brand recognition, bringing us closer to our diners."
+                                                {t("home.reviewsbigbrains")}
                                                 </p>
                                             </div>
                                             <figcaption className="flex flex-col items-center gap-2 p-6 text-sm text-[#ffaa14]">
@@ -134,7 +136,7 @@ export default function Slider() {
                                         <figure className="relative z-10">
                                             <div className="p-6 text-lg leading-loose g:text-xl">
                                                 <p>
-                                                    "Thanks to Max-I's expertise, our LinkedIn lead generation skyrocketed! Their targeted approach and compelling content helped us connect with the right professionals and expand our network."
+                                                {t("home.reviewqbex")}
                                                 </p>
                                             </div>
                                             <figcaption className="flex flex-col items-center gap-2 p-6 text-sm text-[#ffaa14]">
@@ -180,7 +182,7 @@ export default function Slider() {
                                         <figure className="relative z-10">
                                             <div className="p-6 text-lg leading-loose g:text-xl">
                                                 <p>
-                                                    "Max-I revolutionized our social media game, making us digital heroes! Their strategies boosted our engagement and brand recognition, bringing us closer to our diners."
+                                                {t("home.reviewhero")}
                                                 </p>
                                             </div>
                                             <figcaption className="flex flex-col items-center gap-2 p-6 text-sm text-[#ffaa14]">

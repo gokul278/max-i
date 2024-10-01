@@ -4,8 +4,11 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Loader } from '../../Pages/Loader/Loader';
 import { SocialMediaCard } from '../../Pages/SocialMediaCard/SocialMediaCard';
+import { useTranslation } from 'react-i18next';
 
 export const SocialMediaPosters = () => {
+
+    const { t, i18n } = useTranslation("global");
 
     const navigate = useNavigate();
 
@@ -23,8 +26,8 @@ export const SocialMediaPosters = () => {
         <div>
             {loadingstatus ? <Loader /> : <></>}
             <div className="h-[60vh] flex flex-col justify-center items-center" style={{ backgroundImage: `url(${poster})`, width: "100%", backgroundSize: 'cover', backgroundPosition: 'center' }} align="center">
-                <h1 className="text-[30px] lg:text-[40px] text-[#fff] uppercase font-bold">Social Media Posters</h1>
-                <h6 className=" text-[15px] lg:text-[18px] text-[#fff] mt-3 uppercase font-semibold flex justify-center items-center cursor-pointer"><div onClick={() => { navigate("/") }}>Home</div>&nbsp;&nbsp;-&nbsp;&nbsp;<div className="text-[#fff]" onClick={() => { navigate("/works") }}>Our Works</div>&nbsp;&nbsp;-&nbsp;&nbsp;<div className="text-[#ffaa14] " onClick={() => { navigate("/works/logodesigns") }}>Social Media Poster</div></h6>
+                <h1 className="text-[30px] lg:text-[40px] text-[#fff] uppercase font-bold">{t("nav.social")}</h1>
+                <h6 className=" text-[13px] lg:text-[18px] text-[#fff] mt-3 uppercase font-semibold flex justify-center items-center cursor-pointer"><div onClick={() => { navigate("/") }}>{t("nav.home")}</div>&nbsp;&nbsp;-&nbsp;&nbsp;<div className="text-[#fff]" onClick={() => { navigate("/works") }}>{t("nav.works")}</div>&nbsp;&nbsp;-&nbsp;&nbsp;<div className="text-[#ffaa14] " onClick={() => { navigate("/works/logodesigns") }}>{t("nav.social")}</div></h6>
             </div>
             <div className="w-[100%]" align="center">
                 <div className="py-20 w-[90%]">

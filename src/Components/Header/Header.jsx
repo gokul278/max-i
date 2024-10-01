@@ -1,14 +1,23 @@
 import { useState, useEffect } from "react";
 import logo from "../../assets/Img/Home/logo.png";
 import { useLocation, useNavigate } from "react-router-dom";
-import "./Header.css"
+import "./Header.css";
+import { useTranslation } from "react-i18next";
+import enimg from "../../assets/Img/Language/en.svg";
+import deimg from "../../assets/Img/Language/de.svg";
+import { Loader } from "../../Pages/Loader/Loader";
 
 export const Header = () => {
+  const [language, setLanguage] = useState("en");
+  const { t, i18n } = useTranslation("global");
+
   const navigate = useNavigate();
   const [isToggleOpen, setIsToggleOpen] = useState(false);
   const [headerBg, setHeaderBg] = useState("transparent"); // State for background color
 
   let location = useLocation();
+
+  const [loadingstatus, setLoadingStatus] = useState(false);
 
   // Helper function to check if the current path matches the link
   const isActive = (path) => location.pathname === path;
@@ -27,6 +36,18 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const changeLanguage = (newLanguage) => {
+    setLoadingStatus(true);
+    i18n.changeLanguage(newLanguage);
+
+    if (newLanguage === "de") setLanguage("en");
+    else setLanguage("de");
+
+    setTimeout(() => {
+      setLoadingStatus(false);
+    }, 1000);
+  };
+
   // Function to handle navigation and close the navbar on mobile
   const handleNavigation = (path) => {
     navigate(path);
@@ -35,11 +56,12 @@ export const Header = () => {
 
   return (
     <>
+      {loadingstatus ? <Loader /> : <></>}
       <header
         className="border-b-1 fixed z-20 w-full after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full lg:backdrop-blur-sm lg:after:hidden"
         style={{
           backgroundColor: headerBg,
-          transition: "background-color 0.3s ease" // Smooth transition for background color
+          transition: "background-color 0.3s ease", // Smooth transition for background color
         }}
       >
         <div className="relative mx-auto max-w-full px-8 lg:px-20">
@@ -60,11 +82,11 @@ export const Header = () => {
             </a>
             <button
               className={`relative order-10 block h-10 w-10 self-center lg:hidden
-    ${isToggleOpen
-                  ? "visible opacity-100 [&_span:nth-child(1)]:w-6 [&_span:nth-child(1)]:translate-y-0 [&_span:nth-child(1)]:rotate-45 [&_span:nth-child(2)]:-rotate-45 [&_span:nth-child(3)]:w-0 "
-                  : ""
-                }`
-              }
+    ${
+      isToggleOpen
+        ? "visible opacity-100 [&_span:nth-child(1)]:w-6 [&_span:nth-child(1)]:translate-y-0 [&_span:nth-child(1)]:rotate-45 [&_span:nth-child(2)]:-rotate-45 [&_span:nth-child(3)]:w-0 "
+        : ""
+    }`}
               onClick={() => setIsToggleOpen(!isToggleOpen)}
               aria-expanded={isToggleOpen ? "true" : "false"}
               aria-label="Toggle navigation"
@@ -88,49 +110,65 @@ export const Header = () => {
             <ul
               role="menubar"
               aria-label="Select page"
-              className={`absolute left-0 top-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-[#000] px-8 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100 ${isToggleOpen
-                ? "visible opacity-100 backdrop-blur-sm"
-                : "invisible opacity-0"
-                }`}
+              className={`absolute left-0 top-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-[#000] px-8 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100 ${
+                isToggleOpen
+                  ? "visible opacity-100 backdrop-blur-sm"
+                  : "invisible opacity-0"
+              }`}
             >
               <li role="none" className="flex items-stretch">
                 <a
                   role="menuitem"
                   aria-haspopup="false"
-                  className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${isActive("/") ? "text-[#ffaa14]" : "text-[#fff]"} hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
+                  className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${
+                    isActive("/") ? "text-[#ffaa14]" : "text-[#fff]"
+                  } hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
                   onClick={() => handleNavigation("/")}
                 >
-                  <span>Home</span>
+                  <span>{t("nav.home")}</span>
                 </a>
               </li>
               <li role="none" className="flex items-stretch">
                 <a
                   role="menuitem"
                   aria-haspopup="false"
-                  className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${isActive("/aboutus") ? "text-[#ffaa14]" : "text-[#fff]"} hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
+                  className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${
+                    isActive("/aboutus") ? "text-[#ffaa14]" : "text-[#fff]"
+                  } hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
                   onClick={() => handleNavigation("/aboutus")}
                 >
-                  <span>About Us</span>
+                  <span>{t("nav.about")}</span>
                 </a>
               </li>
               <li role="none" className="flex items-stretch">
                 <a
                   role="menuitem"
                   aria-haspopup="false"
-                  className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${isActive("/services") ? "text-[#ffaa14]" : "text-[#fff]"} hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
+                  className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${
+                    isActive("/services") ? "text-[#ffaa14]" : "text-[#fff]"
+                  } hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
                   onClick={() => handleNavigation("/services")}
                 >
-                  <span>Our Services</span>
+                  <span>{t("nav.services")}</span>
                 </a>
               </li>
               <li role="none" className="flex items-stretch">
                 <a
                   role="menuitem"
                   aria-haspopup="false"
-                  className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${isActive("/works") || isActive("/works/webdesigns") || isActive("/works/logodesigns") || isActive("/works/printposters") || isActive("/works/socialmediaposters") || isActive("/works/videos") ? "text-[#ffaa14]" : "text-[#fff]"} hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
+                  className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${
+                    isActive("/works") ||
+                    isActive("/works/webdesigns") ||
+                    isActive("/works/logodesigns") ||
+                    isActive("/works/printposters") ||
+                    isActive("/works/socialmediaposters") ||
+                    isActive("/works/videos")
+                      ? "text-[#ffaa14]"
+                      : "text-[#fff]"
+                  } hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
                   onClick={() => handleNavigation("/works")}
                 >
-                  <span>Our Works</span>
+                  <span>{t("nav.works")}</span>
                 </a>
               </li>
               {/* <li role="none" className="flex items-stretch">
@@ -147,13 +185,35 @@ export const Header = () => {
                 <a
                   role="menuitem"
                   aria-haspopup="false"
-                  className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${isActive("/contact") ? "text-[#ffaa14]" : "text-[#fff]"} hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
+                  className={`flex items-center gap-2 py-4 cursor-pointer transition-colors duration-300 font-[600] text-[19px] ${
+                    isActive("/contact") ? "text-[#ffaa14]" : "text-[#fff]"
+                  } hover:text-[#ffaa14] focus:outline-none focus-visible:outline-none lg:px-8`}
                   onClick={() => handleNavigation("/contact")}
                 >
-                  <span>Contact Us</span>
+                  <span>{t("nav.contact")}</span>
                 </a>
               </li>
             </ul>
+            <div className="ml-auto flex items-center px-6 lg:ml-0 lg:p-0">
+              {/*        <!-- Avatar --> */}
+              <div className="">
+                {language === "en" ? (
+                  <img
+                    onClick={() => changeLanguage("en")}
+                    className="w-[30px] rounded cursor-pointer"
+                    src={enimg}
+                    alt="en"
+                  />
+                ) : (
+                  <img
+                    onClick={() => changeLanguage("de")}
+                    className="w-[30px] rounded cursor-pointer"
+                    src={deimg}
+                    alt="de"
+                  />
+                )}
+              </div>
+            </div>
           </nav>
         </div>
       </header>

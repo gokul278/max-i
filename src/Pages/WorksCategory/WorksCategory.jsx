@@ -5,15 +5,17 @@ import PrintPosters from "../../assets/Img/Works/WorkCategory/Print Posters.png"
 import SocialMediaPosters from "../../assets/Img/Works/WorkCategory/Social Media Posters.png";
 import Videos from "../../assets/Img/Works/WorkCategory/Videos.png";
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export const WorksCategory = () => {
+    const { t, i18n } = useTranslation("global");
 
     const navigate = useNavigate();
 
     const categoryData = [
         {
             img: Logo,
-            name: "Logo Designs",
+            name: t("nav.logo"),
             link: "/logodesigns"
         },
         {
@@ -23,12 +25,12 @@ export const WorksCategory = () => {
         },
         {
             img: PrintPosters,
-            name: "Print Posters",
+            name: t("nav.poster"),
             link: "/printposters"
         },
         {
             img: SocialMediaPosters,
-            name: "Social Media Posters",
+            name: t("nav.social"),
             link: "/socialmediaposters"
         },
         {

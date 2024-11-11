@@ -32,7 +32,7 @@ export const Contactus = () => {
           backgroundPosition: "center",
         }}
       >
-        <h1 className="text-[40px] text-[#fff] uppercase font-bold">
+        <h1 className="text-[20px] lg:text-[40px] text-[#fff] uppercase font-bold">
           {t("nav.contact")}
         </h1>
         <h6 className="text-[18px] text-[#fff] mt-3 uppercase font-semibold flex justify-center items-center cursor-pointer">
@@ -64,62 +64,82 @@ export const Contactus = () => {
           Get In Touch
         </h1>
 
-        <div className="w-[90%] lg:w-[75%] bg-[#F5F7F8] flex flex-col lg:flex-row">
+        <div className="w-[90%] lg:w-[75%] bg-[#F5F7F8] flex pb-10 flex-col lg:flex-row">
           <div
-            className="w-[100%] lg:w-[40%] py-10 bg-[#fff] rounded-l-md"
+            className="w-[100%] lg:w-[40%] bg-[#fff] rounded-l-md"
             style={{
               boxShadow:
                 "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;",
             }}
           >
-            <a
-              target="_blank"
-              href="tel:04273562462"
-              className="py-5 w-[90%] cursor-pointer"
-            >
-              <div className="text-[30px]">
-                <i className="fa-solid fa-phone border border-[#ffaa14] p-3 text-[#ffaa14] rounded-[50%]"></i>
-              </div>
-              <div className="mt-3 text-[20px] text-[#000] font-bold">
-                0427-3562462
-              </div>
-            </a>
-            <br />
-            <br />
+            <div className="pt-10">
+              <a
+                target="_blank"
+                href="tel:+41763953921"
+                className="w-[90%] cursor-pointer"
+              >
+                <div className="text-[15px]">
+                  <i className="fa-solid fa-phone border border-[#ffaa14] p-3 text-[#ffaa14] rounded-[50%]"></i>
+                </div>
+                <div className="mt-3 text-[18px] text-[#000] font-bold font-sans">
+                  +41 76 395 39 21
+                </div>
+              </a>
+            </div>
 
-            <a
-              target="_blank"
-              href="mailto:contact@max-idigital.com"
-              className="py-5 w-[90%] cursor-pointer"
-            >
-              <div className="text-[30px]">
-                <i className="fa-regular fa-envelope border border-[#ffaa14] p-3 text-[#ffaa14] rounded-[50%]"></i>
-              </div>
-              <div className="mt-3 text-[20px] text-[#000] font-bold">
-                contact-us@max-idigital.com
-              </div>
-            </a>
-            <br />
-            <br />
+            <div className="pt-8">
+              <a
+                target="_blank"
+                href="mailto:contact@max-idigital.com"
+                className="w-[90%] cursor-pointer"
+              >
+                <div className="text-[15px]">
+                  <i className="fa-regular fa-envelope border border-[#ffaa14] p-3 text-[#ffaa14] rounded-[50%]"></i>
+                </div>
+                <div className="mt-3 text-[18px] text-[#000] font-bold font-sans">
+                  contact-us@max-idigital.com
+                </div>
+              </a>
+            </div>
 
-            <a
-              target="_blank"
-              href="https://maps.app.goo.gl/34zejcCaCaD2ofhv7"
-              className="pt-10 w-[70%] cursor-pointer"
-            >
-              <div className="text-[30px]">
-                <i className="fa-solid fa-location-dot border border-[#ffaa14] p-3 px-4 text-[#ffaa14] rounded-[50%]"></i>
-              </div>
-              <div className="mt-3 text-[20px] text-[#000] font-bold">
-                38/37 No.1 Logi Street, Gugai,
+            <div className="pt-8">
+              <a
+                target="_blank"
+                href="https://maps.app.goo.gl/xzAdmKzvMFFXgoqB7"
+                className="w-[70%] cursor-pointer"
+              >
+                <div className="text-[15px]">
+                  <i className="fa-solid fa-location-dot border border-[#ffaa14] p-3 px-4 text-[#ffaa14] rounded-[50%]"></i>
+                </div>
+                <div className="mt-3 text-[18px] text-[#000] font-bold font-sans">
+                  {/* 38/37 No.1 Logi Street, Gugai,
                 <br /> Salem - 636006, Tamilnadu,
-                <br /> India
-              </div>
-            </a>
+                <br /> India */}
+                  Corporate Office: <br/> Güterstrasse 8, 8952 Schlieren,<br/> Switzerland
+                </div>
+              </a>
+            </div>
+
+            <div className="pt-8 pb-10">
+              <a
+                target="_blank"
+                href="https://maps.app.goo.gl/jXgitCchAK13imy36"
+                className="w-[70%] cursor-pointer"
+              >
+                <div className="text-[15px]">
+                  <i className="fa-solid fa-location-dot border border-[#ffaa14] p-3 px-4 text-[#ffaa14] rounded-[50%]"></i>
+                </div>
+                <div className="mt-3 text-[18px] text-[#000] font-bold font-sans">
+                  Branch Office: <br /> 38/37B, No.1 Logi Street,
+                  <br /> Gugai, Salem - 636006,
+                  <br /> Tamilnadu, India
+                </div>
+              </a>
+            </div>
           </div>
           <div className="w-[100%] bg-[#fff] rounded-r-md lg:w-[60%]">
             <div className="w-[90%]">
-              <div className="text-[30px] font-bold capitalize text-[#000] pt-10 pb-5">
+              <div className="text-[30px] font-bold capitalize text-[#000] pt-10 lg:pt-20 pb-5">
                 <span className="text-[#ffaa14] uppercase underline">
                   drop us a line
                 </span>
@@ -199,7 +219,7 @@ export const Contactus = () => {
 
         <div className="w-[90%] lg:w-[75%] h-[450px] bg-[#F5F7F8] py-5 lg:py-10">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3907.6855225128643!2d78.1524955!3d11.6457436!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf02bb4fa4d13%3A0xf3ada7f3555f0f5f!2s38%2F37B%2C%20Logi%20Chetty%20Street%20Number%201%2C%20Logi%20Street%2C%20Gugai%2C%20Salem%2C%20Tamil%20Nadu%20636006!5e0!3m2!1sen!2sin!4v1726567998067!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700.675779286769!2d8.445608535601265!3d47.3987585371076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900c715bc72bcd%3A0xae40b37a12d40206!2sG%C3%BCterstrasse%208%2C%208952%20Schlieren%2C%20Switzerland!5e0!3m2!1sen!2sin!4v1728300704635!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: "0", borderRadius: "5px" }}

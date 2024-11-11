@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../../assets/Img/Home/logo.png";
+import logo from "../../assets/Img/Home/logo.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Header.css";
 import { useTranslation } from "react-i18next";
